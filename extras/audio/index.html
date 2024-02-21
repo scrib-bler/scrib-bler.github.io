@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="A compendium of information and guides written to ease headaches.">
+        <meta name="description" content="Arcade Games Troubleshooting Guide">
       
       
         <meta name="author" content="two-torial Team">
@@ -14,22 +14,20 @@
       
       
       
-        <link rel="next" href="games/chunithmsunplus/setup/">
       
-      
-      <link rel="icon" href="img/favicon.ico">
+      <link rel="icon" href="../../img/favicon.ico">
       <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.5">
     
     
       
-        <title>two-torial.xyz</title>
+        <title>What is WASAPI and ASIO? - two-torial.xyz</title>
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.50c56a3b.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.50c56a3b.min.css">
       
         
-        <link rel="stylesheet" href="assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -48,7 +46,7 @@
       
     
     
-    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -72,7 +70,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#_1" class="md-skip">
+        <a href="#what-is-wasapi-and-asio" class="md-skip">
           Skip to content
         </a>
       
@@ -88,9 +86,9 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="." title="two-torial.xyz" class="md-header__button md-logo" aria-label="two-torial.xyz" data-md-component="logo">
+    <a href="../.." title="two-torial.xyz" class="md-header__button md-logo" aria-label="two-torial.xyz" data-md-component="logo">
       
-  <img src="img/logo/website-logo.svg" alt="logo">
+  <img src="../../img/logo/website-logo.svg" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -107,7 +105,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Home
+              What is WASAPI and ASIO?
             
           </span>
         </div>
@@ -157,9 +155,9 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="." title="two-torial.xyz" class="md-nav__button md-logo" aria-label="two-torial.xyz" data-md-component="logo">
+    <a href="../.." title="two-torial.xyz" class="md-nav__button md-logo" aria-label="two-torial.xyz" data-md-component="logo">
       
-  <img src="img/logo/website-logo.svg" alt="logo">
+  <img src="../../img/logo/website-logo.svg" alt="logo">
 
     </a>
     two-torial.xyz
@@ -183,19 +181,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="." class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -204,7 +193,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -327,7 +315,7 @@
   
   
     <li class="md-nav__item">
-      <a href="games/chunithmsunplus/setup/" class="md-nav__link">
+      <a href="../../games/chunithmsunplus/setup/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -348,7 +336,7 @@
   
   
     <li class="md-nav__item">
-      <a href="games/chunithmsunplus/controllers/" class="md-nav__link">
+      <a href="../../games/chunithmsunplus/controllers/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -369,7 +357,7 @@
   
   
     <li class="md-nav__item">
-      <a href="games/chunithmsunplus/networks/" class="md-nav__link">
+      <a href="../../games/chunithmsunplus/networks/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -390,7 +378,7 @@
   
   
     <li class="md-nav__item">
-      <a href="games/chunithmsunplus/problems/" class="md-nav__link">
+      <a href="../../games/chunithmsunplus/problems/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -447,6 +435,41 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#wasapi-shared" class="md-nav__link">
+    <span class="md-ellipsis">
+      WASAPI Shared
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wasapi-exclusive" class="md-nav__link">
+    <span class="md-ellipsis">
+      WASAPI Exclusive
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#asio" class="md-nav__link">
+    <span class="md-ellipsis">
+      ASIO
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -463,23 +486,64 @@
   
 
 
-<h1 id="_1"></h1>
-<figure>
-<p><img alt="Banner" src="img/logo/banner.png" /></p>
-</figure>
-<figure>
-<p><a class="md-button" href="https://discord.gg/cZRUmEPK78">We now have a Discord server!</a></p>
-</figure>
-<p>Scribbler's SEGA beta page</p>
+<h1 id="what-is-wasapi-and-asio">What is WASAPI and ASIO?</h1>
+<div class="admonition tip">
+<p><code>WASAPI</code> and <code>ASIO</code> are audio systems that manage how your applications like games, music, and others interact with your audio hardware. Without these core systems you would <ins>not</ins> be able to hear anything. This is a basic explanation on what they are and will not go into detail on how they function. There are 3 types that I'll cover here with pros and cons for each one.</p>
+<p>I would <ins>personally</ins> recommend using <code>WASAPI Shared</code> as this has in most cases the highest chance of working and requires the least amount of work. You can enable it by using a <a href="../patchweb/#how-to-use-patcher-websites">hex edit.</a></p>
+<p>If you would like to use <code>WASAPI Exclusive</code>, you can read more about it <a href="../streamaudio/#workarounds-for-exclusive-audio">here.</a></p>
+</div>
+<h3 id="wasapi-shared">WASAPI Shared</h3>
+<div class="admonition tip">
+<p><code>WASAPI Shared</code> mode is the standard mode that Windows uses. This allows you to hear multiple audio sources at once and allows programs to capture audio with programs like OBS and Discord. While this is nice for using windows and playing most games, this has a <em>negative side effect of increasing audio latency.</em></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Pros:
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>-Multiple audio sources can be sent to one audio device.
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>-Can capture audio using OBS or Discord.
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>-Supports almost all audio hardware as this is the standard for Windows.
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>-Easy to set up.
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>Cons:
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>-Higher Latency.
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>-Poor/Hard to configure for low latency.
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>-USB audio devices are not supported (DAC).
+</span></code></pre></div>
+</div>
+<h3 id="wasapi-exclusive">WASAPI Exclusive</h3>
+<div class="admonition tip">
+<p><code>WASAPI Exclusive</code> mode is a secondary mode which allows one program to take complete control over an audio device. This allows an application to do anything to your audio device including changing settings like change volume, sample rates, and buffer size. With this in mind, this also bypasses a lot of latency that is introduced with multiple applications playing their own audio. </p>
+<p>The main downside is that you can only hear <ins>one</ins> audio source (the program that has control). In this case for example, beatmaniaIIDX would take complete control and you would not be able to hear applications like Discord. You cannot capture audio while running this mode without special software.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>Pros:
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>-Low Latency (Real Time Latency)
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>-Supports almost all audio hardware as this is the standard for Windows.
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>Cons:
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>-Application controls the hardware.
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>-Not easily configurable.
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>-Can not capture audio with OBS or Discord (Can be done, but requires a lot of configuration and can introduce latency. Switching to WASAPI Shared mode is recommended for this use case).
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>-USB audio devices are not supported (DAC).
+</span></code></pre></div>
+</div>
+<h3 id="asio">ASIO</h3>
+<div class="admonition tip">
+<p><code>ASIO</code> stands for Audio Stream Input/Output. This is an audio driver designed for Audio Interfaces on Windows that is very similar to WASAPI Exclusive.</p>
+<p>The biggest difference between ASIO and WASAPI Exclusive is software/hardware support and age. In order to use ASIO, <ins>both your hardware and the application you are using must support ASIO.</ins> For example, Sound Voltex supports ASIO natively but it does take a bit to set up compared to WASAPI Exclusive. ASIO also has higher configurability.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>Pros:
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>-Low Latency (Real Time Latency)
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>-Highly Configurable
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>-Industry standard for musicians means tons of support documentation.
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>Cons:
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>-Limited Hardware Support
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>-Application controls hardware.
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>-Can not capture audio with OBS or Discord (Can be done, but requires a lot of configuration and can introduce latency. Switching to WASAPI Shared mode is recommended for this use case).
+</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>-Requires a powerful CPU.
+</span></code></pre></div>
+</div>
 
 
 
 
 
 
-
-  
-  
 
 
 
@@ -524,10 +588,10 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": ".", "features": [], "search": "assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="assets/javascripts/bundle.c18c5fb9.min.js"></script>
+      <script src="../../assets/javascripts/bundle.c18c5fb9.min.js"></script>
       
     
   </body>

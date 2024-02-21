@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="A compendium of information and guides written to ease headaches.">
+        <meta name="description" content="Arcade Games Troubleshooting Guide">
       
       
         <meta name="author" content="two-torial Team">
@@ -14,22 +14,20 @@
       
       
       
-        <link rel="next" href="games/chunithmsunplus/setup/">
       
-      
-      <link rel="icon" href="img/favicon.ico">
+      <link rel="icon" href="../../img/favicon.ico">
       <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.5">
     
     
       
-        <title>two-torial.xyz</title>
+        <title>Beginner's Guide to Hex Editing - two-torial.xyz</title>
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.50c56a3b.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.50c56a3b.min.css">
       
         
-        <link rel="stylesheet" href="assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -48,7 +46,7 @@
       
     
     
-    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -72,7 +70,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#_1" class="md-skip">
+        <a href="#beginners-guide-to-hex-editing" class="md-skip">
           Skip to content
         </a>
       
@@ -88,9 +86,9 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="." title="two-torial.xyz" class="md-header__button md-logo" aria-label="two-torial.xyz" data-md-component="logo">
+    <a href="../.." title="two-torial.xyz" class="md-header__button md-logo" aria-label="two-torial.xyz" data-md-component="logo">
       
-  <img src="img/logo/website-logo.svg" alt="logo">
+  <img src="../../img/logo/website-logo.svg" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -107,7 +105,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Home
+              Beginner's Guide to Hex Editing
             
           </span>
         </div>
@@ -157,9 +155,9 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="." title="two-torial.xyz" class="md-nav__button md-logo" aria-label="two-torial.xyz" data-md-component="logo">
+    <a href="../.." title="two-torial.xyz" class="md-nav__button md-logo" aria-label="two-torial.xyz" data-md-component="logo">
       
-  <img src="img/logo/website-logo.svg" alt="logo">
+  <img src="../../img/logo/website-logo.svg" alt="logo">
 
     </a>
     two-torial.xyz
@@ -183,19 +181,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="." class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -204,7 +193,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -327,7 +315,7 @@
   
   
     <li class="md-nav__item">
-      <a href="games/chunithmsunplus/setup/" class="md-nav__link">
+      <a href="../../games/chunithmsunplus/setup/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -348,7 +336,7 @@
   
   
     <li class="md-nav__item">
-      <a href="games/chunithmsunplus/controllers/" class="md-nav__link">
+      <a href="../../games/chunithmsunplus/controllers/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -369,7 +357,7 @@
   
   
     <li class="md-nav__item">
-      <a href="games/chunithmsunplus/networks/" class="md-nav__link">
+      <a href="../../games/chunithmsunplus/networks/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -390,7 +378,7 @@
   
   
     <li class="md-nav__item">
-      <a href="games/chunithmsunplus/problems/" class="md-nav__link">
+      <a href="../../games/chunithmsunplus/problems/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -447,6 +435,32 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#before-beginning" class="md-nav__link">
+    <span class="md-ellipsis">
+      Before Beginning
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getting-started" class="md-nav__link">
+    <span class="md-ellipsis">
+      Getting Started
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -463,23 +477,56 @@
   
 
 
-<h1 id="_1"></h1>
-<figure>
-<p><img alt="Banner" src="img/logo/banner.png" /></p>
-</figure>
-<figure>
-<p><a class="md-button" href="https://discord.gg/cZRUmEPK78">We now have a Discord server!</a></p>
-</figure>
-<p>Scribbler's SEGA beta page</p>
+<h1 id="beginners-guide-to-hex-editing">Beginner's Guide to Hex Editing</h1>
+<div class="admonition warning">
+<p class="admonition-title">Before reading:</p>
+<p>This section is for users that have never hex edited their game before, if you already know how to do this, nothing here will be of any use to you.</p>
+</div>
+<h3 id="before-beginning">Before Beginning</h3>
+<div class="admonition tip">
+<p>There's several ways to apply hex edits to games, for the sake of this guide we'll demonstrate the manual way of doing edits to games in the event that the sites/services that simplify the process ever go down.</p>
+<p>We'll be using HxD to edit beatmania IIDX 25 CANNON BALLERS, the process is the same for any other game so this guide can work universally.</p>
+<p>Here's what you'll need:</p>
+<ul>
+<li>Your favorite hex editor, such as <a href="https://mh-nexus.de/en/hxd/">HxD</a>.</li>
+<li>A clean copy of your desired BEMANI game.</li>
+<li>A backup of your original <code>.dll</code> before editing in the event of any mistakes.</li>
+</ul>
+</div>
+<h3 id="getting-started">Getting Started</h3>
+<div class="admonition tip">
+<p>So after downloading HxD or your preferred editor and deciding on what hex edits you want to apply, it's time to load it up for the first time. If you're using HxD, you'll be greeted with the screen below.</p>
+</div>
+<p><img src="/img/hexguide/1.png"></p>
+<div class="admonition tip">
+<p>Open up the appropriate <code>.dll</code> file inside HxD that you wish to edit, for the grand majority of hex edits, this is the main game file, such as <code>bm2dx.dll</code>, <code>soundvoltex.dll</code>, and so on. Pictured below, I've opened up <code>bm2dx.dll</code> inside of HxD.</p>
+</div>
+<p><img src="/img/hexguide/2.png"></p>
+<div class="admonition warning">
+<p class="admonition-title">Please note:</p>
+<p>For demonstrative purposes, we're going to apply 1 edit to the game. The edit we'll be applying is EXCLUSIVE to this version of the game, meaning that it will not work on any other version of the game, nor any other games, because it's modifying specific addresses in memory that only apply to this specific version of the game.</p>
+</div>
+<div class="admonition tip">
+<p>The edit we've chosen to apply is <code>Unlock All Songs</code> and its edit is <code>0xB60B2: 74 10 -&gt; 90 90</code> so to start in HxD we're going to hit <code>Ctrl+G</code> to open the <code>Goto</code> window. From here, we'll input the offset <code>B60B2</code> inside the <code>Offset</code> section, as pictured, and hit OK.</p>
+</div>
+<p><img src="/img/hexguide/3.png"></p>
+<div class="admonition tip">
+<p>Your cursor should be taken to the offset at the exact location you're ready to edit. As you can see, the numbers in front of you are <code>74</code> and <code>10</code> the same exact ones we need to replace! If they're not, it's likely you put in the wrong offset so be sure to double check.</p>
+</div>
+<p><img src="/img/hexguide/4.png"></p>
+<div class="admonition tip">
+<p>From here, all we need to do is mouse over <code>74 10</code> and replace it with <code>90 90</code> you can do this by either manually typing <code>90 90</code> or by copy and pasting, it should look as it does below.</p>
+</div>
+<p><img src="/img/hexguide/5.png"></p>
+<div class="admonition tip">
+<p>Once that's done, all you need to do is save the changes and repeat for every additional edit you want to do! The whole process is merely repeating by going to whichever offsets an edit requires and replacing the values in each location just as we did! Simple, right?</p>
+</div>
 
 
 
 
 
 
-
-  
-  
 
 
 
@@ -524,10 +571,10 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": ".", "features": [], "search": "assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="assets/javascripts/bundle.c18c5fb9.min.js"></script>
+      <script src="../../assets/javascripts/bundle.c18c5fb9.min.js"></script>
       
     
   </body>
