@@ -1,0 +1,77 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>CHUNITHM DLL Patching Tools</title>
+        <link rel="stylesheet" href="css/style.css">
+        <script>
+            window.addEventListener('DOMContentLoaded', function() {
+                // implement radio-style behaviour for categories
+                for(const input of document.querySelectorAll(".sectionToggle")) {
+                    input.onclick = () => {
+                        for(const el of document.querySelectorAll(".sectionToggle")) {
+                            if(el != input) el.checked = false;
+                        }
+                    }
+                }
+            });
+        </script>
+    </head>
+    <body>
+        <h1>Pick a game!</h1>
+            <div class="subsection">
+                <a href="chuni.html" class="gameicon">
+                    <img src="img/chuni.png">
+                    <div>CHUNITHM</div>
+                </a>
+                <a href="chuniplus.html" class="gameicon">
+                    <img src="img/chuniplus.jpg">
+                    <div>CHUNITHM PLUS</div>
+                </a>
+                <a href="chuniair.html" class="gameicon">
+                    <img src="img/chuniair.png">
+                    <div>CHUNITHM AIR</div>
+                </a>
+                <a href="chunistar.html" class="gameicon">
+                    <img src="img/chunistar.png">
+                    <div>CHUNITHM STAR</div>
+                </a>
+                <a href="chuniamazon.html" class="gameicon">
+                    <img src="img/chuniamazon.png">
+                    <div>CHUNITHM AMAZON</div>
+                </a>
+                <a href="chunicrystal.html" class="gameicon">
+                    <img src="img/chunicrystal.png">
+                    <div>CHUNITHM CRYSTAL</div>
+                </a>
+                <a href="chuniparadise.html" class="gameicon">
+                    <img src="img/chuniparadise.png">
+                    <div>CHUNITHM PARADISE</div>
+                </a>
+                <a href="chuninew.html" class="gameicon">
+                    <img src="img/chuninew.png">
+                    <div>CHUNITHM NEW!!</div>
+                </a>
+                <a href="chuninewplus.html" class="gameicon">
+                    <img src="img/chuninewplus.png">
+                    <div>CHUNITHM NEW PLUS!!</div>
+                </a>
+                <a href="chunisun.html" class="gameicon">
+                    <img src="img/chunisun.png">
+                    <div>CHUNITHM SUN</div>
+                </a>
+                <a href="chunisunplus.html" class="gameicon">
+                    <img src="img/chunisunplus.png">
+                    <div>CHUNITHM SUN PLUS</div>
+                </a>
+                <a href="chuniluminous.html" class="gameicon">
+                    <img src="img/chuniluminous.png">
+                    <div>CHUNITHM LUMINOUS</div>
+                </a>
+            </div>
+            </a>
+        </div>
+        <div class="tagline">Offline Patcher compiled from various sources. <a href="https://github.com/mon/BemaniPatcher/">Original Patcher</a></div>
+        <div class="tagline"><em>Converted to a web-tool by <a href="https://github.com/mon/">mon</a></em></div>
+    </body>
+</html>
