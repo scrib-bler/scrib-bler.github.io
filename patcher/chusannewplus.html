@@ -1,111 +1,367 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <title>CHUNITHM NEW PLUS!! Modder</title>
-        <link rel="stylesheet" href="css/style.css">
-        <script type="text/javascript" src="js/dllpatcher.js"></script>
-        <script type="text/javascript">
-            window.addEventListener("load", function () {
+
+<head>
+    <meta charset="utf-8">
+    <title>CHUNITHM NEW PLUS!! Modder</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script type="text/javascript" src="js/dllpatcher.js"></script>
+    <script type="text/javascript">
+        window.addEventListener("load", function () {
             new PatchContainer([
                 new Patcher("chusanApp.exe", "2.05.00", [
                     {
-                        name: "Disable shop close lockout",
-                        tooltip: "Disables ~12-8am lockout. Does not disable maint lockout from 6:30-7am JST",
-                        patches: [
-                            {offset: 0xB81943, off: [0x74], on: [0xEB]},
-                        ],
-                    },
-                    {
-                        name: "Force shared audio mode, system audio samplerate must be 48000",
-                        tooltip: "Improves compatibility but may increase latency",
-                        patches: [
-                            {offset: 0xE95D2A, off: [0x01], on: [0x00]},
-                        ],
-                    },
-                    {
-                        name: "Force 2 channel audio output",
-                        patches: [
-                            {offset: 0xE95E01, off: [0x75, 0x3F], on: [0x90, 0x90]},
-                        ],
-                    },
-                    {
-                        name: "Disable Song Select Timer",
-                        patches: [
-                            {offset: 0x98455B, off: [0x74], on: [0xEB]},
-                        ],
-                    },
-                    {
-                        name: "Set All Timers to 999",
-                        patches: [
-                            {offset: 0x819940, off: [0x8B, 0x44, 0x24, 0x04, 0x69, 0xC0, 0xE8, 0x03, 0x00, 0x00], on: [0xB8, 0x58, 0x3E, 0x0F, 0x00, 0x90, 0x90, 0x90, 0x90, 0x90]},
-                        ],
-                    },
-                    {
-                        name: "Unlimit Maximum Tracks",
-                        tooltip: "You must check to play more than 7 tracks.",
-                        patches: [
-                            {offset: 0x6CBC89, off: [0xF0], on: [0xC0]},
-                        ],
-                    },
-                    {
-                        type : "number",
-                        name : "Max Tracks",
-                        offset : 0x398381,
-                        size : 4,
-                        min : 1,
-                        max : 12,
-                    },
-                    {
-                        name: "Patch for head-to-head play",
-                        tooltip: "Fix infinite sync while trying to connect to head to head play.",
-                        patches: [
-                            {offset: 0x609FB3, off: [0x01], on: [0x00]},
+                        "name": "Force shared audio mode, system audio sample rate must be 48000Hz",
+                        "tooltip": "Improves compatibility, but may increase latency",
+                        "patches": [
+                            {
+                                "offset": 15293738,
+                                "off": [
+                                    1
+                                ],
+                                "on": [
+                                    0
+                                ]
+                            }
                         ]
                     },
                     {
-                        name: "No Encryption",
-                        tooltip: "Title server workaround",
-                        patches: [
-                            {offset: 0x1D10640, off: [0xCD], on: [0x00]},
-                            {offset: 0x1D10644, off: [0xCD], on: [0x00]},
+                        "name": "Force 2 channel audio output",
+                        "tooltip": "May cause bass overload",
+                        "patches": [
+                            {
+                                "offset": 15293953,
+                                "off": [
+                                    117,
+                                    63
+                                ],
+                                "on": [
+                                    144,
+                                    144
+                                ]
+                            }
                         ]
                     },
                     {
-                        name: "CVT Mode",
-                        danger: "[DEPRECATED] Check to use 60Hz",
-                        patches: [
-                            {offset: 0x1D864, off: [0x01], on: [0x00]},
-                            {offset: 0x1D89B, off: [0x01], on: [0x00]},
-                            {offset: 0x37BBCB, off: [0x75], on: [0xEB]},
-                            {offset: 0x37D6DE, off: [0x84, 0xC0, 0x0F, 0x94, 0xC1], on: [0x90, 0x90, 0x90, 0x90, 0x90]},
-                            {offset: 0xE78E37, off: [0x80], on: [0x00]},
-                        ],
+                        "name": "Disable song select timer",
+                        "patches": [
+                            {
+                                "offset": 9979227,
+                                "off": [
+                                    116
+                                ],
+                                "on": [
+                                    235
+                                ]
+                            }
+                        ]
                     },
                     {
-                        name: "Bypass LED board check",
-                        danger: "[DEPRECATED] Forces LED board check to good and auto continues",
-                        patches: [
-                            {offset: 0x95790A, off: [0x01], on: [0x00]},
-                            {offset: 0x95790F, off: [0x00], on: [0x01]},
-                        ],
+                        "name": "Set all timers to 999",
+                        "danger": "Breaks online matching functionality",
+                        "patches": [
+                            {
+                                "offset": 8493376,
+                                "off": [
+                                    139,
+                                    68,
+                                    36,
+                                    4,
+                                    105,
+                                    192,
+                                    232,
+                                    3,
+                                    0,
+                                    0
+                                ],
+                                "on": [
+                                    184,
+                                    88,
+                                    62,
+                                    15,
+                                    0,
+                                    144,
+                                    144,
+                                    144,
+                                    144,
+                                    144
+                                ]
+                            }
+                        ]
                     },
+                    {
+                        "name": "Unlimited maximum tracks",
+                        "tooltip": "Must check to play more than 7 tracks per credit",
+                        "patches": [
+                            {
+                                "offset": 7126153,
+                                "off": [
+                                    240
+                                ],
+                                "on": [
+                                    192
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "name": "No encryption",
+                        "tooltip": "Will also disable TLS",
+                        "patches": [
+                            {
+                                "offset": 30475840,
+                                "off": [
+                                    205
+                                ],
+                                "on": [
+                                    0
+                                ]
+                            },
+                            {
+                                "offset": 30475844,
+                                "off": [
+                                    205
+                                ],
+                                "on": [
+                                    0
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "name": "No TLS",
+                        "tooltip": "Title server workaround",
+                        "patches": [
+                            {
+                                "offset": 15175223,
+                                "off": [
+                                    128
+                                ],
+                                "on": [
+                                    0
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Patch for head-to-head play",
+                        "tooltip": "Fix infinite sync while trying to connect to head to head play",
+                        "patches": [
+                            {
+                                "offset": 6332339,
+                                "off": [
+                                    1
+                                ],
+                                "on": [
+                                    0
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Bypass 1080p/120Hz monitor check",
+                        "patches": [
+                            {
+                                "offset": 120863,
+                                "off": [
+                                    129,
+                                    188,
+                                    36,
+                                    184,
+                                    2,
+                                    0,
+                                    0,
+                                    128,
+                                    7,
+                                    0,
+                                    0,
+                                    117,
+                                    31,
+                                    129,
+                                    188,
+                                    36,
+                                    188,
+                                    2,
+                                    0,
+                                    0,
+                                    56,
+                                    4,
+                                    0,
+                                    0,
+                                    117,
+                                    18
+                                ],
+                                "on": [
+                                    144,
+                                    144,
+                                    144,
+                                    144,
+                                    144,
+                                    144,
+                                    144,
+                                    144,
+                                    144,
+                                    144,
+                                    144,
+                                    144,
+                                    144,
+                                    144,
+                                    144,
+                                    144,
+                                    144,
+                                    144,
+                                    144,
+                                    144,
+                                    144,
+                                    144,
+                                    144,
+                                    144,
+                                    144,
+                                    144
+                                ]
+                            },
+                            {
+                                "offset": 120849,
+                                "off": [
+                                    133,
+                                    192
+                                ],
+                                "on": [
+                                    235,
+                                    48
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Disable shop close lockout",
+                        "danger": "[DEPRECATED] Just disable it in the test menu",
+                        "patches": [
+                            {
+                                "offset": 12065091,
+                                "off": [
+                                    116
+                                ],
+                                "on": [
+                                    235
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Bypass LED board check",
+                        "danger": "[DEPRECATED] Forces LED board check to good and auto continues",
+                        "patches": [
+                            {
+                                "offset": 9795850,
+                                "off": [
+                                    1
+                                ],
+                                "on": [
+                                    0
+                                ]
+                            },
+                            {
+                                "offset": 9795855,
+                                "off": [
+                                    0
+                                ],
+                                "on": [
+                                    1
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Ignore some errors from amdaemon",
+                        "danger": "[DEPRECATED] May relieve some errors like error 6401, but may also cause problems elsewhere.",
+                        "patches": [
+                            {
+                                "offset": 3661771,
+                                "off": [
+                                    117
+                                ],
+                                "on": [
+                                    235
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "type": "number",
+                        "name": "Maximum tracks",
+                        "offset": 3769217,
+                        "size": 4,
+                        "min": 3,
+                        "max": 12
+                    }
                 ])
-                ]);
-                new PatchContainer([
+            ]);
+            new PatchContainer([
                 new Patcher("amdaemon.exe", "2.05.00", [
-					{
-						name: "Infinite Credits",
-						patches: [
-							{ offset: 0x2BB928, off: [0x28], on: [0x08] },
-						],
+                    {
+                        "name": "Allow 127.0.0.1/localhost as the network server",
+                        "patches": [
+                            {
+                                "offset": 7063612,
+                                "off": [
+                                    49,
+                                    50,
+                                    55,
+                                    47
+                                ],
+                                "on": [
+                                    48,
+                                    47,
+                                    56,
+                                    0
+                                ]
+                            },
+                            {
+                                "offset": 3895028,
+                                "off": [
+                                    255,
+                                    21,
+                                    62,
+                                    121,
+                                    26,
+                                    0,
+                                    139
+                                ],
+                                "on": [
+                                    51,
+                                    192,
+                                    72,
+                                    131,
+                                    196,
+                                    40,
+                                    195
+                                ]
+                            }
+                        ]
                     },
+                    {
+                        "name": "Infinite credits",
+                        "patches": [
+                            {
+                                "offset": 2865448,
+                                "off": [
+                                    40
+                                ],
+                                "on": [
+                                    8
+                                ]
+                            }
+                        ]
+                    }
                 ])
-                ]);
-            });
-        </script>
-    </head>
-    <body>
-        <h1>CHUNITHM NEW PLUS!! Modder</h1>
-    </body>
+            ]);
+        });
+    </script>
+</head>
+
+<body>
+    <h1>CHUNITHM NEW PLUS!! Modder</h1>
+</body>
+
 </html>
