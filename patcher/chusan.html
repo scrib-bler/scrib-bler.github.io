@@ -79,6 +79,16 @@
                     },
                 ])
                 ]);
+                new PatchContainer([
+                new Patcher("amdaemon.exe", "2.00.01", [
+					{
+						name: "Infinite Credits",
+						patches: [
+							{ offset: 0x2BB928, off: [0x28], on: [0x08] },
+						],
+                    },
+                ])
+                ]);
             });
         </script>
     </head>
