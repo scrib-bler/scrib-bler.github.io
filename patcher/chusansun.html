@@ -45,6 +45,14 @@
                         ]
                     },
                     {
+                        type: "number",
+                        name: "Maximum tracks",
+                        offset: 0x3978c1,
+                        size: 4,
+                        min: 3,
+                        max: 12
+                    },
+                    {
                         name: "No encryption",
                         tooltip: "Will also disable TLS",
                         patches: [
@@ -80,6 +88,13 @@
                         ]
                     },
                     {
+                        name: "Force FREE PLAY credit text",
+                        tooltip: "Replaces the credit count with FREE PLAY",
+                        patches: [
+                            {offset: 0x386d54, off: [0x3c, 0x01], on: [0x38, 0xc0]}
+                        ]
+                    },
+                    {
                         name: "Disable shop close lockout",
                         danger: "[DEPRECATED] Just disable it in the test menu",
                         patches: [
@@ -100,14 +115,6 @@
                         patches: [
                             {offset: 0x37d4ab, off: [0x75], on: [0xeb]}
                         ]
-                    },
-                    {
-                        type: "number",
-                        name: "Maximum tracks",
-                        offset: 0x3978c1,
-                        size: 4,
-                        min: 3,
-                        max: 12
                     }
                 ])
             ]);
