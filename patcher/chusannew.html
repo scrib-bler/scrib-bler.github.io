@@ -2,371 +2,137 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <title>CHUNITHM NEW!! Modder</title>
-  <link rel="stylesheet" href="css/style.css">
-  <script type="text/javascript" src="js/dllpatcher.js"></script>
-  <script type="text/javascript">
-    window.addEventListener("load", function () {
-      new PatchContainer([
-        new Patcher("chusanApp.exe", "2.00.01", [
-          {
-            "name": "Force shared audio mode, system audio sample rate must be 48000Hz",
-            "tooltip": "Improves compatibility, but may increase latency",
-            "patches": [
-              {
-                "offset": 15175226,
-                "off": [
-                  1
-                ],
-                "on": [
-                  0
-                ]
-              }
-            ]
-          },
-          {
-            "name": "Force 2 channel audio output",
-            "tooltip": "May cause bass overload",
-            "patches": [
-              {
-                "offset": 15175441,
-                "off": [
-                  117,
-                  63
-                ],
-                "on": [
-                  144,
-                  144
-                ]
-              }
-            ]
-          },
-          {
-            "name": "Disable song select timer",
-            "patches": [
-              {
-                "offset": 9884843,
-                "off": [
-                  116
-                ],
-                "on": [
-                  235
-                ]
-              }
-            ]
-          },
-          {
-            "name": "Set all timers to 999",
-            "danger": "Breaks online matching functionality",
-            "patches": [
-              {
-                "offset": 8408160,
-                "off": [
-                  139,
-                  68,
-                  36,
-                  4,
-                  105,
-                  192,
-                  232,
-                  3,
-                  0,
-                  0
-                ],
-                "on": [
-                  184,
-                  88,
-                  62,
-                  15,
-                  0,
-                  144,
-                  144,
-                  144,
-                  144,
-                  144
-                ]
-              }
-            ]
-          },
-          {
-            "name": "Unlimited maximum tracks",
-            "tooltip": "Must check to play more than 7 tracks per credit",
-            "patches": [
-              {
-                "offset": 7052553,
-                "off": [
-                  240
-                ],
-                "on": [
-                  192
-                ]
-              }
-            ]
-          },
-          {
-            "name": "No encryption",
-            "tooltip": "Will also disable TLS",
-            "patches": [
-              {
-                "offset": 30271016,
-                "off": [
-                  200
-                ],
-                "on": [
-                  0
-                ]
-              },
-              {
-                "offset": 30271020,
-                "off": [
-                  200
-                ],
-                "on": [
-                  0
-                ]
-              }
-            ]
-          },
-          {
-            "name": "No TLS",
-            "tooltip": "Title server workaround",
-            "patches": [
-              {
-                "offset": 15057431,
-                "off": [
-                  128
-                ],
-                "on": [
-                  0
-                ]
-              }
-            ]
-          },
-          {
-            "name": "Patch for head-to-head play",
-            "tooltip": "Fix infinite sync while trying to connect to head to head play",
-            "patches": [
-              {
-                "offset": 6262931,
-                "off": [
-                  1
-                ],
-                "on": [
-                  0
-                ]
-              }
-            ]
-          },
-          {
-            "name": "Bypass 1080p monitor check",
-            "patches": [
-              {
-                "offset": 120863,
-                "off": [
-                  129,
-                  188,
-                  36,
-                  184,
-                  2,
-                  0,
-                  0,
-                  128,
-                  7,
-                  0,
-                  0,
-                  117,
-                  31,
-                  129,
-                  188,
-                  36,
-                  188,
-                  2,
-                  0,
-                  0,
-                  56,
-                  4,
-                  0,
-                  0,
-                  117,
-                  18
-                ],
-                "on": [
-                  144,
-                  144,
-                  144,
-                  144,
-                  144,
-                  144,
-                  144,
-                  144,
-                  144,
-                  144,
-                  144,
-                  144,
-                  144,
-                  144,
-                  144,
-                  144,
-                  144,
-                  144,
-                  144,
-                  144,
-                  144,
-                  144,
-                  144,
-                  144,
-                  144,
-                  144
-                ]
-              }
-            ]
-          },
-          {
-            "name": "Bypass 120Hz monitor check",
-            "patches": [
-              {
-                "offset": 120849,
-                "off": [
-                  133,
-                  192
-                ],
-                "on": [
-                  235,
-                  48
-                ]
-              }
-            ]
-          },
-          {
-            "name": "Disable shop close lockout",
-            "danger": "[DEPRECATED] Just disable it in the test menu",
-            "patches": [
-              {
-                "offset": 11973875,
-                "off": [
-                  116
-                ],
-                "on": [
-                  235
-                ]
-              }
-            ]
-          },
-          {
-            "name": "Bypass LED board check",
-            "danger": "[DEPRECATED] Forces LED board check to good and auto continues",
-            "patches": [
-              {
-                "offset": 9702938,
-                "off": [
-                  1
-                ],
-                "on": [
-                  0
-                ]
-              },
-              {
-                "offset": 9702943,
-                "off": [
-                  0
-                ],
-                "on": [
-                  1
-                ]
-              }
-            ]
-          },
-          {
-            "name": "Ignore some errors from amdaemon",
-            "danger": "[DEPRECATED] May relieve some errors like error 6401, but may also cause problems elsewhere.",
-            "patches": [
-              {
-                "offset": 3662411,
-                "off": [
-                  117
-                ],
-                "on": [
-                  235
-                ]
-              }
-            ]
-          },
-          {
-            "type": "number",
-            "name": "Maximum tracks",
-            "offset": 3769777,
-            "size": 4,
-            "min": 3,
-            "max": 12
-          }
-        ])
-      ]);
-      new PatchContainer([
-        new Patcher("amdaemon.exe", "2.00.01", [
-          {
-            "name": "Allow 127.0.0.1/localhost as the network server",
-            "patches": [
-              {
-                "offset": 7063612,
-                "off": [
-                  49,
-                  50,
-                  55,
-                  47
-                ],
-                "on": [
-                  48,
-                  47,
-                  56,
-                  0
-                ]
-              },
-              {
-                "offset": 3895028,
-                "off": [
-                  255,
-                  21,
-                  62,
-                  121,
-                  26,
-                  0,
-                  139
-                ],
-                "on": [
-                  51,
-                  192,
-                  72,
-                  131,
-                  196,
-                  40,
-                  195
-                ]
-              }
-            ]
-          },
-          {
-            "name": "Infinite credits",
-            "patches": [
-              {
-                "offset": 2865448,
-                "off": [
-                  40
-                ],
-                "on": [
-                  8
-                ]
-              }
-            ]
-          }
-        ])
-      ]);
-    });
-  </script>
+    <meta charset="utf-8">
+    <title>CHUNITHM NEW!! Modder</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script type="text/javascript" src="js/dllpatcher.js"></script>
+    <script type="text/javascript">
+        window.addEventListener("load", function () {
+            new PatchContainer([
+                new Patcher("chusanApp.exe", "2.00.01", [
+                    {
+                        name: "Force shared audio mode, system audio sample rate must be 48000Hz",
+                        tooltip: "Improves compatibility, but may increase latency",
+                        patches: [
+                            {offset: 0xe78e3a, off: [0x01], on: [0x00]}
+                        ]
+                    },
+                    {
+                        name: "Force 2 channel audio output",
+                        tooltip: "May cause bass overload",
+                        patches: [
+                            {offset: 0xe78f11, off: [0x75, 0x3f], on: [0x90, 0x90]}
+                        ]
+                    },
+                    {
+                        name: "Disable song select timer",
+                        patches: [
+                            {offset: 0x96d4ab, off: [0x74], on: [0xeb]}
+                        ]
+                    },
+                    {
+                        name: "Set all timers to 999",
+                        danger: "Breaks online matching functionality",
+                        patches: [
+                            {offset: 0x804c60, off: [0x8b, 0x44, 0x24, 0x04, 0x69, 0xc0, 0xe8, 0x03, 0x00, 0x00], on: [0xb8, 0x58, 0x3e, 0x0f, 0x00, 0x90, 0x90, 0x90, 0x90, 0x90]}
+                        ]
+                    },
+                    {
+                        name: "Unlimited maximum tracks",
+                        tooltip: "Must check to play more than 7 tracks per credit",
+                        patches: [
+                            {offset: 0x6b9d09, off: [0xf0], on: [0xc0]}
+                        ]
+                    },
+                    {
+                        name: "No encryption",
+                        tooltip: "Will also disable TLS",
+                        patches: [
+                            {offset: 0x1cde628, off: [0xc8], on: [0x00]},
+                            {offset: 0x1cde62c, off: [0xc8], on: [0x00]}
+                        ]
+                    },
+                    {
+                        name: "No TLS",
+                        tooltip: "Title server workaround",
+                        patches: [
+                            {offset: 0xe5c217, off: [0x80], on: [0x00]}
+                        ]
+                    },
+                    {
+                        name: "Patch for head-to-head play",
+                        tooltip: "Fix infinite sync while trying to connect to head to head play",
+                        patches: [
+                            {offset: 0x5f9093, off: [0x01], on: [0x00]}
+                        ]
+                    },
+                    {
+                        name: "Bypass 1080p monitor check",
+                        patches: [
+                            {offset: 0x1d81f, off: [0x81, 0xbc, 0x24, 0xb8, 0x02, 0x00, 0x00, 0x80, 0x07, 0x00, 0x00, 0x75, 0x1f, 0x81, 0xbc, 0x24, 0xbc, 0x02, 0x00, 0x00, 0x38, 0x04, 0x00, 0x00, 0x75, 0x12], on: [0x90, 0x90, 0x90, 0x90, 0x90, 0x90, 0x90, 0x90, 0x90, 0x90, 0x90, 0x90, 0x90, 0x90, 0x90, 0x90, 0x90, 0x90, 0x90, 0x90, 0x90, 0x90, 0x90, 0x90, 0x90, 0x90]}
+                        ]
+                    },
+                    {
+                        name: "Bypass 120Hz monitor check",
+                        patches: [
+                            {offset: 0x1d811, off: [0x85, 0xc0], on: [0xeb, 0x30]}
+                        ]
+                    },
+                    {
+                        name: "Disable shop close lockout",
+                        danger: "[DEPRECATED] Just disable it in the test menu",
+                        patches: [
+                            {offset: 0xb6b4f3, off: [0x74], on: [0xeb]}
+                        ]
+                    },
+                    {
+                        name: "Bypass LED board check",
+                        danger: "[DEPRECATED] Forces LED board check to good and auto continues",
+                        patches: [
+                            {offset: 0x940e1a, off: [0x01], on: [0x00]},
+                            {offset: 0x940e1f, off: [0x00], on: [0x01]}
+                        ]
+                    },
+                    {
+                        name: "Ignore some errors from amdaemon",
+                        danger: "[DEPRECATED] May relieve some errors like error 6401, but may also cause problems elsewhere.",
+                        patches: [
+                            {offset: 0x37e24b, off: [0x75], on: [0xeb]}
+                        ]
+                    },
+                    {
+                        type: "number",
+                        name: "Maximum tracks",
+                        offset: 0x3985b1,
+                        size: 4,
+                        min: 3,
+                        max: 12
+                    }
+                ])
+            ]);
+            new PatchContainer([
+                new Patcher("amdaemon.exe", "2.00.01", [
+                    {
+                        name: "Allow 127.0.0.1/localhost as the network server",
+                        patches: [
+                            {offset: 0x6bc83c, off: [0x31, 0x32, 0x37, 0x2f], on: [0x30, 0x2f, 0x38, 0x00]},
+                            {offset: 0x3b6ef4, off: [0xff, 0x15, 0x3e, 0x79, 0x1a, 0x00, 0x8b], on: [0x33, 0xc0, 0x48, 0x83, 0xc4, 0x28, 0xc3]}
+                        ]
+                    },
+                    {
+                        name: "Infinite credits",
+                        patches: [
+                            {offset: 0x2bb928, off: [0x28], on: [0x08]}
+                        ]
+                    }
+                ])
+            ]);
+        });
+    </script>
 </head>
 
 <body>
-  <h1>CHUNITHM NEW!! Modder</h1>
+    <h1>CHUNITHM NEW!! Modder</h1>
 </body>
 
 </html>
