@@ -45,6 +45,14 @@
                         ]
                     },
                     {
+                        type: "number",
+                        name: "Maximum tracks",
+                        offset: 0x397eb1,
+                        size: 4,
+                        min: 3,
+                        max: 12
+                    },
+                    {
                         name: "No encryption",
                         tooltip: "Will also disable TLS",
                         patches: [
@@ -86,6 +94,13 @@
                         ]
                     },
                     {
+                        type: "hex",
+                        name: "Custom FREE PLAY text",
+                        tooltip: "Replace the FREE PLAY text when using Infinite credits",
+                        offset: 0x19d88c4,
+                        off: [0x46, 0x52, 0x45, 0x45, 0x20, 0x50, 0x4c, 0x41, 0x59],
+                    },
+                    {
                         name: "Bypass LED board check",
                         danger: "[DEPRECATED] Forces LED board check to good and auto continues",
                         patches: [
@@ -99,14 +114,6 @@
                         patches: [
                             {offset: 0x37daeb, off: [0x75], on: [0xeb]}
                         ]
-                    },
-                    {
-                        type: "number",
-                        name: "Maximum tracks",
-                        offset: 0x397eb1,
-                        size: 4,
-                        min: 3,
-                        max: 12
                     }
                 ]),
                 new Patcher("chusanApp.exe", "2.22.00", [
@@ -192,6 +199,23 @@
                         patches: [
                             {offset: 0x387394, off: [0x3c, 0x01], on: [0x38, 0xc0]}
                         ]
+                    },
+                    // currently broken due to how type: "number" is implemented in dllpatcher.js. left here for when a solution is found
+                    //{
+                    //    type: "number",
+                    //    name: "Custom credit text length",
+                    //    tooltip: "Changes the length of the text displayed when Force FREE PLAY credit text is enabled",
+                    //    offset: 0x387399,
+                    //    size: 1,
+                    //    min: 0,
+                    //    max: 11,
+                    //},
+                    {
+                        type: "hex",
+                        name: "Custom FREE PLAY text",
+                        tooltip: "Replace the FREE PLAY text when using Infinite credits",
+                        offset: 0x19d9cd4,
+                        off: [0x46, 0x52, 0x45, 0x45, 0x20, 0x50, 0x4c, 0x41, 0x59],
                     },
                     {
                         name: "Disable shop close lockout",
