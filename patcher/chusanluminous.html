@@ -101,6 +101,13 @@
                         off: [0x46, 0x52, 0x45, 0x45, 0x20, 0x50, 0x4c, 0x41, 0x59],
                     },
                     {
+                        name: "Disable shop close lockout",
+                        danger: "[DEPRECATED] Just disable it in the test menu",
+                        patches: [
+                            {offset: 0xbed463, off: [0x74], on: [0xeb] },
+                        ],
+                    },
+                    {
                         name: "Bypass LED board check",
                         danger: "[DEPRECATED] Forces LED board check to good and auto continues",
                         patches: [
