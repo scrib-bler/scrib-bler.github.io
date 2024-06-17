@@ -5,16 +5,10 @@
         <title>CHUNITHM Patching Tools</title>
         <link rel="stylesheet" href="css/style.css">
         <script>
-            window.addEventListener('DOMContentLoaded', function() {
-                // implement radio-style behaviour for categories
-                for(const input of document.querySelectorAll(".sectionToggle")) {
-                    input.onclick = () => {
-                        for(const el of document.querySelectorAll(".sectionToggle")) {
-                            if(el != input) el.checked = false;
-                        }
-                    }
-                }
-            });
+		  function play(){
+			   var audio = document.getElementById("audio");
+			   audio.play();
+						 }
         </script>
     </head>
     <body>
@@ -94,6 +88,7 @@
         <div class="tagline">Chuni patches sourced from various online patchers</div>
 		<div class="tagline">Chusan patches created with <a href="https://gitea.tendokyu.moe/beerpsi/CHUNITHM-Patch-Finder">CHUNITHM-Patch-Finder<a></div>
         <div class="tagline"><em>Original web patcher by <a href="https://github.com/mon/">mon</a></em></div>
-		<div class="tagline"><img src="spinning-chicken.gif" width="110" height="139"></div>
-    </body>
+		<div class="tagline"><img src="spinning-chicken.gif" width="110" height="139" value="PLAY" onclick="play()"></div>
+		<audio id="audio" src="a.mp3" ></audio>
+	</body>
 </html>
