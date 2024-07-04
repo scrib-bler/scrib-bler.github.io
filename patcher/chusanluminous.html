@@ -94,6 +94,16 @@
                         ]
                     },
                     {
+                        type: "number",
+                        name: "Custom FREE PLAY text length",
+                        tooltip: "Changes the length of the text displayed when Force FREE PLAY credit text is enabled",
+						danger: "If this is longer than 11 characters, \"Force FREE PLAY credit text\" MUST be enabled.",
+                        offset: 0x387399,
+                        size: 1,
+                        min: 0,
+                        max: 27,
+                    },
+                    {
                         type: "hex",
                         name: "Custom FREE PLAY text",
                         tooltip: "Replace the FREE PLAY text when using Infinite credits",
@@ -207,16 +217,16 @@
                             {offset: 0x387394, off: [0x3c, 0x01], on: [0x38, 0xc0]}
                         ]
                     },
-                    // currently broken due to how type: "number" is implemented in dllpatcher.js. left here for when a solution is found
-                    //{
-                    //    type: "number",
-                    //    name: "Custom credit text length",
-                    //    tooltip: "Changes the length of the text displayed when Force FREE PLAY credit text is enabled",
-                    //    offset: 0x387399,
-                    //    size: 1,
-                    //    min: 0,
-                    //    max: 11,
-                    //},
+                    {
+                        type: "number",
+                        name: "Custom FREE PLAY text length",
+                        tooltip: "Changes the length of the text displayed when Force FREE PLAY credit text is enabled",
+						danger: "If this is longer than 11 characters, \"Force FREE PLAY credit text\" MUST be enabled.",
+                        offset: 0x387399,
+                        size: 1,
+                        min: 0,
+                        max: 27,
+                    },
                     {
                         type: "hex",
                         name: "Custom FREE PLAY text",
