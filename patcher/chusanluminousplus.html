@@ -135,7 +135,7 @@
                 ]),
 			]);
             new PatchContainer([
-                new Patcher("amdaemon.exe", ">2.20.00", [
+                new Patcher("amdaemon.exe", "2.20.00", [
                     {
                         name: "Allow 127.0.0.1/localhost as the network server",
                         patches: [
@@ -147,6 +147,21 @@
                         name: "Infinite credits",
                         patches: [
                             {offset: 0x2BAFC8, off: [0x28], on: [0x08]}
+                        ]
+                    }
+                ]),
+            new Patcher("amdaemon.exe", "2.25.00", [
+                    {
+                        name: "Allow 127.0.0.1/localhost as the network server",
+                        patches: [
+                            {offset: 0x6E28A4, off: [0x31, 0x32, 0x37, 0x2F], on: [0x30, 0x2F, 0x38, 0x00]},
+                            {offset: 0x3C94C4, off: [0xFF, 0x15, 0xC6, 0x2F, 0x1B, 0x00, 0x8B], on: [0x33, 0xC0, 0x48, 0x83, 0xC4, 0x28, 0xC3]}
+                        ]
+                    },
+                    {
+                        name: "Infinite credits",
+                        patches: [
+                            {offset: 0x2BBBC8, off: [0x28], on: [0x08]}
                         ]
                     }
                 ])
