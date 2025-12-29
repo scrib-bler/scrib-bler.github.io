@@ -31,11 +31,31 @@
                         ]
                     },
                     {
-                        name: "Set all timers to 999",
-                        danger: "Breaks online matching functionality",
-                        patches: [
-                            {offset: 0x8791B0, off: [0x8b, 0x44, 0x24, 0x04, 0x69, 0xc0, 0xe8, 0x03, 0x00, 0x00], on: [0xb8, 0x58, 0x3e, 0x0f, 0x00, 0x90, 0x90, 0x90, 0x90, 0x90]}
-                        ]
+                        name: "Map selection timer",
+                        tooltip: "If set to negative, the timer becomes 968 + value (e.g. 968 + -1 = 967)",
+                        type: "number",
+                        offset: 0x965B37,
+                        size: 1,
+                        min: -128,
+                        max: 127,
+                    },
+                    {
+                        name: "Ticket selection timer",
+                        tooltip: "If set to negative, the timer becomes 968 + value (e.g. 968 + -1 = 967)",
+                        type: "number",
+                        offset: 0x9592C2,
+                        size: 1,
+                        min: -128,
+                        max: 127,
+                    },
+                    {
+                        name: "Course selection timer",
+                        tooltip: "If set to negative, the timer becomes 968 + value (e.g. 968 + -1 = 967)",
+                        type: "number",
+                        offset: 0xA0EADB,
+                        size: 1,
+                        min: -128,
+                        max: 127,
                     },
                     {
                         name: "Unlimited maximum tracks",
@@ -131,26 +151,18 @@
                         patches: [
                             {offset: 0x37DCFB, off: [0x75], on: [0xeb]}
                         ]
-                    }
+                    },
+                    {
+                        name: "Set all timers to 999",
+                        danger: "[DEPRECATED] Breaks online matching functionality",
+                        patches: [
+                            {offset: 0x8791B0, off: [0x8b, 0x44, 0x24, 0x04, 0x69, 0xc0, 0xe8, 0x03, 0x00, 0x00], on: [0xb8, 0x58, 0x3e, 0x0f, 0x00, 0x90, 0x90, 0x90, 0x90, 0x90]}
+                        ]
+                    },
                 ]),
 			]);
             new PatchContainer([
-                new Patcher("amdaemon.exe", "2.20.00", [
-                    {
-                        name: "Allow 127.0.0.1/localhost as the network server",
-                        patches: [
-                            {offset: 0x6E1CA4, off: [0x31, 0x32, 0x37, 0x2f], on: [0x30, 0x2f, 0x38, 0x00]},
-                            {offset: 0x3C88C4, off: [0xff, 0x15, 0xc6, 0x2f, 0x1b, 0x00, 0x8b], on: [0x33, 0xc0, 0x48, 0x83, 0xc4, 0x28, 0xc3]}
-                        ]
-                    },
-                    {
-                        name: "Infinite credits",
-                        patches: [
-                            {offset: 0x2BAFC8, off: [0x28], on: [0x08]}
-                        ]
-                    }
-                ]),
-            new Patcher("amdaemon.exe", "2.25.00", [
+                new Patcher("amdaemon.exe", "2.25.00", [
                     {
                         name: "Allow 127.0.0.1/localhost as the network server",
                         patches: [
@@ -164,6 +176,22 @@
                             {offset: 0x2BBBC8, off: [0x28], on: [0x08]}
                         ]
                     }
+                ])
+            ]);
+            new PatchContainer([
+                new Patcher("chu.acf", "chu.acf", [
+                    {
+                        name: "Force audio output as headphone",
+                        danger: "You need to use the in-game volume controls on the song screen to adjust the volume; otherwise, it will be very low.",
+                        tooltip: "If you can’t hear audio on title screen, it is normal",
+                        patches: [
+                            {
+                                offset: 0xCE8,
+                                off: [0x01],
+                                on: [0x00],
+                            },
+                        ],
+                    },
                 ])
             ]);
         });
